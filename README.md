@@ -65,6 +65,12 @@ To get your own api key visit [Groq Cloud](https://console.groq.com/keys).
 python -m streamlit run ./src/app.py
 ```
 
+### Step 5: Run Docker App
+
+```bash
+docker run -p 8501:8501 streamlit-app
+```
+
 ## Architecture and Models Used
 `roberta_base` model from huggingFace hub is used and finetuned for Sentiment Analysis.
 

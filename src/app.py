@@ -22,10 +22,11 @@ def load_model():
         id2label = {0:"student", 1:"corporate", 2:"researcher"}
         config = AutoConfig.from_pretrained(model_id)
         config.update({"id2label": id2label})
-        model = RobertaForSequenceClassification.from_pretrained(model_id, config=config)
+        model = RobertaForSequenceClassification.from_pretrained(model_id, config=config)        
         tokenizer = RobertaTokenizerFast.from_pretrained(model_id)
 
         pipe = pipeline('text-classification',model, tokenizer=tokenizer) 
+        # pipe = pipeline('text-classification',model, tokenizer=tokenizer, device='cuda') 
         return pipe
     
 @st.cache_resource
@@ -35,6 +36,8 @@ def load_vectorstore():
         embedding_function = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
 
         vectordb = Chroma(persist_directory=persist_directory, embedding_function=embedding_function)
+        # model_kwargs = {'device': 'cuda'}
+        # embedding_function = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2", model_kwargs=model_kwargs)
         return vectordb
 
 
