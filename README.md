@@ -10,6 +10,9 @@ Bachelor of Technology (B.Tech)
 Indian Institute of Technology Gandhinagar
 ```
 
+The RoBERTA classification model can be viewed at [HuggingFace_Hub](https://huggingface.co/pulkitgautam/email-classifier)
+
+
 ## Repository Structure
 The repository has been divided into:
 
@@ -43,6 +46,18 @@ With the environment activated, install the required dependencies listed in the 
 ```bash
 pip install -r requirements.txt
 ```
+
+### Step 4: Setting-up Environment Variables
+Create a .env file in the root directory of the repo and set your GROQ_API_KEY.
+```bash
+touch .env
+```
+
+```python
+GROQ_API_KEY="YOUR API KEY"
+```
+
+To get your own api key visit [Groq Cloud](https://console.groq.com/keys).
 
 ### Step 4: Run the App
 
