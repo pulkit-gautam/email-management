@@ -59,7 +59,7 @@ model = RobertaForSequenceClassification.from_pretrained(model_id, config=config
 tokenizer = RobertaTokenizerFast.from_pretrained(model_id)
 ```
 
-![Model Architecture](data\architecture_model.png)
+![Model Architecture](data/architecture_model.png)
 
 ### Model Overview
 RoBERTa, developed by `Facebook AI`, has achieved state-of-the-art results on numerous NLP benchmarks, including sentiment analysis. Its architecture is designed to improve upon the original BERT model by using `dynamic masking`, which allows it to generalize better and learn richer language patterns. This capability significantly enhances its performance on sentiment analysis tasks
