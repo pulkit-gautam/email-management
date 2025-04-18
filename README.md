@@ -1,7 +1,5 @@
 # email-management
 
-This project is part of the AI/ML Engineer- Technical Assignment from SmartSense Consulting Solutions PVT LTD.
-
 Author's info
 ```bash
 Pulkit Gautam
